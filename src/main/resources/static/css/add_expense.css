@@ -1,0 +1,145 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin:0;
+  padding:0;
+}
+
+
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav li {
+  display: block;
+  margin-right: 20px;
+  margin-left: 20px; /* Adjust the spacing between menu items */
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+}
+
+/* Background Image */
+.bg-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(10px); /* Add a blur effect to the background */
+}
+
+label {
+    color: rgb(167, 2, 255);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+.one{
+  font-family: 'lato', sans-serif;
+  font-size: xx-large;
+  color: rgb(0, 0, 255);
+  margin-top: 50px;
+  margin-left:50px;
+}
+
+.two{
+  font-family: 'lato', sans-serif;
+  font-size: xx-large;
+  color: rgb(0, 0, 255);
+  margin-top: 50px;
+  margin-left:50px;
+}
+/*
+.container{
+  font-family: 'Poppins', sans-serif;
+}
+
+li a:hover{
+  background: linear-gradient(rgb(16, 86, 143) ,rgb(76, 130, 192));
+  color:rgb(0, 255, 0);
+  border-radius: 15px;
+}
+*/
+
+/*Tooltip css*/
+.container i{
+  position: relative;
+}
+
+
+/*Input fields css*/
+
+.input {
+    width: 50%;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    border-radius: 20px;
+    background-color: #fffcfc;
+  }
+  
+  .input::placeholder {
+    background-color: #fffcfc;
+    font-size: 13px;
+  }
+  
+  .input:focus {
+    outline: none;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    border: none;
+  }
+  
+  .wrapper{
+    text-align: center;
+    margin-left: -50px;
+    margin-top: 60px;
+  }
+  label{
+    margin-left: -41%;
+  }
+  form{
+    text-align: center;
+    align-items: center;
+  }
+
+  .flex-container{
+    display: flex;
+    width:60%;
+    justify-content:space-around;
+    flex-direction: row;
+    margin-left: 19.5%;
+  }
+
+  #date{
+    width:20%;
+  }
+
+/*Add eXpense button css*/
+.footer button {
+    padding: 1.3em 3em;
+    font-size: 12px;    
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 255);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  

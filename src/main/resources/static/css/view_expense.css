@@ -1,0 +1,266 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background image */
+.bg-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(8px); /* Add a blur effect to the background */
+}
+
+/* Style for a black button */
+.black-button {
+    background-color: #02fff1;
+    color: white; /* Set text color to contrast with the black background */
+    /* You can also add additional styles like padding, border, etc. here */
+}
+
+/* Add the CSS styles for your form here */
+/*.container-nv {
+    position: fixed;
+    bottom: 0;
+    left: 0; !* Stick to the right side *!
+    background-color: rgb(167, 2, 255);
+    color: white;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    display: -moz-inline-block;
+    margin-right: 20px;
+    margin-left: 20px; !* Adjust the spacing between menu items *!
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #008fff;
+    font-weight: normal;
+}
+
+label {
+    color: white;
+}*/
+.container-nv {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Stick to the right side */
+    background-color: rgba(167, 2, 255, 0.5);
+    color: white;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    display: -moz-inline-block;
+    margin-right: 20px;
+    margin-left: 20px; /* Adjust the spacing between menu items */
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #008fff;
+    font-weight: normal;
+}
+
+label {
+    color: white;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+.one {
+    font-family: 'lato', sans-serif;
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.two {
+    font-family: 'Lato', sans-serif;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-solid {
+    margin-top: 3px;
+    margin-left: 5px;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+li a:hover {
+    background: linear-gradient(rgb(247, 255, 0), rgb(76, 130, 192));
+    color: rgb(0, 255, 0);
+    border-radius: 15px;
+}
+
+/* Tooltip CSS */
+.container i {
+    position: relative;
+}
+
+.container span {
+    position: absolute;
+    height: 37px;
+    width: 70px;
+    font-size: 12px;
+    padding: 0 5px 5px 5px;
+    bottom: -40px;
+    left: 85%;
+    min-width: 15px;
+    color: rgb(0, 143, 255);
+    transform: translate(-40%, -50px);
+    line-height: 37px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container i:hover span {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+.square span:before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: rgb(127, 198, 255);
+    top: -6px;
+    left: 35%;
+    transform: translate(-10%) rotate(45deg);
+    z-index: -1;
+}
+
+/* Input fields CSS */
+.input {
+    width: 50%;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    border-radius: 20px;
+    background-color: #fffcfc;
+}
+
+.input::placeholder {
+    background-color: #fffcfc;
+    font-size: 13px;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.wrapper {
+    text-align: center;
+    margin-left: -50px;
+    margin-top: 60px;
+}
+
+label {
+    margin-left: -41%;
+}
+
+form {
+    text-align: center;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-left: 19.5%;
+}
+
+#date {
+    width: 20%;
+}
+
+/* Add Expense button CSS */
+
+.footer button {
+    padding: 1.3em 13em;
+    margin-left: 50%;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(247, 255, 0);
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+.footer button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.footer button:active {
+    transform: translateY(-1px);
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .container-nv {
+        width: 90%;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/edit.css">
+    
+    <style>
+    	@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin:0;
+  padding:0;
+}
+body{
+    background-color: rgb(209, 207, 205);
+  }
+
+.one{
+  font-family: 'Raleway', sans-serif;
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+  margin-top: 50px;
+  margin-left:50px;
+}
+.two{
+  font-family: 'Raleway', sans-serif;
+  font-size: x-large;
+  color: rgb(54, 50, 50);
+  margin-left:50px;
+}
+.container{
+  font-family: 'Poppins', sans-serif;
+}
+.fa-solid{
+  margin-top : 3px;
+  margin-left: 5px;
+  padding-left:20px;
+  font-size: 1.5rem;
+  color: rgb(54,50,50);
+  cursor:pointer;
+}
+
+li a:hover{
+  background: linear-gradient(rgb(16, 86, 143) ,rgb(76, 130, 192));
+  color:#fff;
+  border-radius: 15px;
+}
+
+/*Tooltip css*/ 
+
+.container i{
+  position: relative;
+}
+
+.container span{
+  position: absolute;
+  height : 37px;
+  width:70px;
+  font-size: 12px;
+  padding: 0 5px 5px 5px;
+  bottom:-40px;
+  left:85%;
+  min-width:15px;
+  color:white;
+  transform:translate(-40%,-50px);
+  line-height: 37px;
+  text-align: center;
+  border-radius: 10px;
+  background: rgb(16, 86, 143);
+  transition:all 0.3s ease;
+  opacity:0;
+  pointer-events: none;
+}
+
+.container i:hover span{
+  opacity:1;
+  pointer-events: auto;
+  transform:translate(-50%,0);
+}
+.container span:before{
+  content:'';
+  position:absolute;
+  height:15px;
+  width:15px;
+  background: rgb(16, 86, 143);
+  top:-6px;
+  left:35%;
+  transform:translate(-10%) rotate(45deg);
+  z-index:-1;
+}
+
+/*input field css*/
+
+.input {
+    width: 50%;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    border-radius: 20px;
+    background-color: #fffcfc;
+  }
+  
+  .input::placeholder {
+    background-color: #fffcfc;
+    font-size: 12px;
+  }
+  
+  .input:focus {
+    outline: none;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    border: none;
+  }
+  
+  .wrapper{
+    text-align: center;
+    margin-left: -50px;
+    margin-top: 60px;
+  }
+  label{
+    margin-left: -41%;
+  }
+  form{
+    text-align: center;
+    align-items: center;
+  }
+
+  .flex-container{
+    display: flex;
+    width:60%;
+    justify-content:space-around;
+    flex-direction: row;
+    margin-left: 19.5%;
+  }
+
+  #date{
+    width:20%;
+  }
+
+  
+  
+  /*add Expense button css*/
+
+.footer button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .footer button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .footer button:active {
+    transform: translateY(-1px);
+  }
+
+  
+    	
+    </style>
+    
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <div>
+            <div class="one">Expense</div>
+            <div class="two">Tracker</div>    
+        </div> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" th:href="@{/index}"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" th:href="@{/addExpense}"><b>Add Expense</b></a>
+              </li>
+              <li class="nav-item">
+   				 <a class="nav-link active" aria-current="page" th:href="@{/calculator}"><b>Calculator</b></a>
+			</li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" th:href="@{/viewExpense}"><b>View Expense</b></a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" th:href="@{/profile}"><b>Profile</b></a>
+              </li> -->
+              <!-- <i class="fa-solid fa-user"><span>User</span></i>&nbsp;
+          <i class="fa-solid fa-right-from-bracket"><span>Logout</span></i> -->
+
+          <!-- User icon -->
+          <i class="fa-solid fa-user"><span>User</span></i>&nbsp;
+          <!-- Logout icon -->
+          <a th:href="@{/login}"><i class="fa-solid fa-right-from-bracket"><span>Logout</span></i></a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="form">
+    
+        <!-- Add Expense Heading -->
+        <div class="wrapper">
+            <div class="two">
+                Update Expense
+            </div><br>
+        </div>
+    
+        <form th:action="@{/viewExpense/{id}(id=${expense.id})}" th:object = ${expense} method="post">
+            <label><b>Enter Expense :</b></label><br>
+            <input 
+            type="text" 
+            id="text" 
+            name="expense_name" 
+            th:field="*{expense_name}" 
+            class="input" 
+            placeholder="Add Expense here..." required><br><br>
+
+            <div class="flex-container">
+           &nbsp;&nbsp;
+
+            <!-- <label><b>Enter Price :</b></label><br> -->
+            <input 
+            type="text" 
+            id="price" 
+            name="price" 
+            th:field="*{price}" 
+            class="input" 
+            placeholder="Add Price here..." required>&nbsp;&nbsp;
+
+             <!-- <label><b>Enter Date :</b></label><br> -->
+             <input 
+             type="text" 
+             id="date" 
+             name="date" 
+             th:field="*{date}"
+             class="input" 
+             placeholder="Add Date here..." required><br><br>
+        
+          </div><br>
+
+          <!-- <textarea class="input" name="message" rows="5" cols="20" placeholder="Enter description here  (optional)"></textarea> -->
+          <br><br>
+            <div class="footer">
+                <button> Update Expense +</button>
+            </div><br><br>
+    
+        </form>
+    
+    </div>
+
+</body>
+</html>

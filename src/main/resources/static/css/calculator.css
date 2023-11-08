@@ -1,0 +1,151 @@
+/* Global Styles */
+body {
+    font-family: lato, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #02fff1;
+}
+
+
+.one {
+	font-size: 5px;
+}
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Navigation Styles */
+ul.footer-nav {
+    text-decoration-color: white;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #007bff;
+    margin: 0;
+}
+
+.footer-nav li {
+    margin-right: 20px;
+    color: white;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Calculator Styles */
+
+/*.container-nv {
+    position: absolute;
+    bottom: 0;
+    left: 0; !* Stick to the right side *!
+    background-color: rgb(167, 2, 255);
+    color: white;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+}*/
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+
+.calculator {
+
+    background-color: #fff;
+    border: 1px solid #02fff1;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(2, 255, 241);
+}
+
+.calculator h2 {
+
+    color: #a702ff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.calculator label {
+    text-decoration-color: white;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.calculator input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #181816;
+    border-radius: 3px;
+}
+
+.calculator button {
+    background-color: #007bff;
+    color: #7fc6ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%; /* Make the button width 100% */
+}
+.calculator button:hover {
+    background-color: #0056b3;
+}
+
+.calculator p {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .calculator {
+        max-width: 70%;
+    }
+}
+
+/* Background Image Styles */
+/*.bg-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(8px);
+}*/
+
+.bg-img {
+    text-decoration-color: white;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(15px); /* Add a blur effect to the background */
+}
+
+
+/* Container Styles */
+.container-nv {
+    margin-top: 20px;
+    text-align: center;
+}

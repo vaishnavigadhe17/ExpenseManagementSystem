@@ -1,0 +1,67 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=lato:wght@800&display=swap');
+
+/* Set the font-family for specific text elements */
+
+.one {
+    font-family: 'lato', monospace;
+    font-size: 44px;
+    font-weight: 800;
+    color: #a702ff;
+}
+
+/* Background Image */
+.bg-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    center: 0;
+    /*left: 0;*/
+    z-index: -1;
+    filter: Blur(5px); /* Add a blur effect to the background */
+}
+
+ .centered {
+    display: table-cell;
+    justify-content: center;
+    align-items: center;
+    height: 200vh; /* This ensures the div takes up the full viewport height */
+  }
+
+/* Add the CSS styles here */
+
+
+.container-nv table {
+    width: 70%; /* Make the table 100% wide within the container */
+    /* Add any additional styling for your table here */
+}
+
+
+.footer-nav {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 10px; /* Add some padding for spacing */
+    list-style: none;
+}
+
+.footer-nav li {
+    margin-right: 20px; /* Adjust the spacing between menu items */
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #f7ff00;
+    font-weight: normal;
+    font-size: 16px; /* Adjust the font size as needed */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-nav a:hover {
+    color: #181816; /* Change color on hover */
+}
+
